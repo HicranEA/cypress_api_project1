@@ -1,0 +1,17 @@
+{
+    "postRequestBody": {
+      "DOB": "1974-07-28",
+      "EMAIL": "abcdefg@hotmail.com",
+      "FIRST_NAME": "Emma",
+      "LAST_NAME": "Blunt",
+      "INSTRUCTOR_ID": 4
+    },
+
+    "updateRequestBody": {
+        "DOB": "1974-07-28",
+        "EMAIL": "abcdefg@gmail.com",
+        "FIRST_NAME": "Emma",
+        "LAST_NAME": "Blunt",
+        "INSTRUCTOR_ID": 2
+    }   
+}
