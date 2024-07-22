@@ -51,8 +51,7 @@ describe('TechGlobal Students API Tests', () => {
         }).then((response) => {
           expect(response.status).to.eq(201)
         
-        studentID = response.body.STUDENT_ID;
-        });
+        studentID = response.body.STUDENT_ID
 
         cy.request({
           method: 'GET',
@@ -63,10 +62,8 @@ describe('TechGlobal Students API Tests', () => {
            const students = response.body.STUDENTS;
 
            expect(students.map(student => student.STUDENT_ID)).to.include(studentID);
-        });
-   });
-        
-    it('Delete the newly created student and validate the response', () => {
+            
+    //it('Delete the newly created student and validate the response', () => {
         cy.request({
           method: 'DELETE',
           url: `${baseURL}/students/${studentID}`,
@@ -74,4 +71,6 @@ describe('TechGlobal Students API Tests', () => {
           expect(response.status).to.eq(204)
             });
     });
+});
+});
 });
