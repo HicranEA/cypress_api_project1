@@ -71,12 +71,8 @@ describe('TechGlobal Students API Tests', () => {
         method: 'DELETE',
         url: `${baseURL}/${studentID}`,
       }).then((response) => {
-        expect(response.status).to.eq(200)
+        expect(response.status).to.eq(204)
         expect(response.body).to.have.property('message').to.eq(`Successfully deleted user with Id: ${studentID}`)
     })
   })
 })
-  
-
-
-
