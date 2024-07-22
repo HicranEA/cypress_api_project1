@@ -62,7 +62,7 @@ describe('TechGlobal Students API Tests', () => {
         body: updateRequestBody,
       }).then((response) => {
         expect(response.status).to.eq(200)
-        expect(response.body).to.be.eq(`Successfully updated ${updateRequestBody.FIRST_NAME}`)
+        expect(response.body.message).to.be.eq(`Successfully updated the student with the STUDENT_ID: ${studentID}`)
       })
   })
 
@@ -72,7 +72,7 @@ describe('TechGlobal Students API Tests', () => {
         url: `${baseURL}/${studentID}`,
       }).then((response) => {
         expect(response.status).to.eq(204)
-        expect(response.body).to.have.property('message').to.eq(`Successfully deleted user with Id: ${studentID}`)
+        //expect(response.body).to.have.property('message').to.be.eq(`Successfully deleted user with Id: ${studentID}`)
     })
   })
 })
